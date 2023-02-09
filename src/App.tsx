@@ -9,6 +9,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <TaskCreator functionOnSubmit={(value) => setCurrentValue(value)} />
+      <p>{currentValue}</p>
     </div>
   );
 }
