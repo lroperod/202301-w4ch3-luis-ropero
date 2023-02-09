@@ -1,5 +1,5 @@
 import { FC } from "react";
-
+import "./TaskCreator.css";
 interface TaskCreatorProps {
   functionOnSubmit: (value: string) => void;
 }
@@ -10,9 +10,16 @@ const TaskCreator: FC<TaskCreatorProps> = ({ functionOnSubmit }) => {
     functionOnSubmit(inputValue);
   };
   return (
-    <form onSubmit={submitHandler}>
-      <input type="text" name="taskList" />
-      <button type="submit">Add new task</button>
+    <form className="todo-form" onSubmit={submitHandler}>
+      <input
+        className="todo-form_input"
+        type="text"
+        name="taskList"
+        placeholder="New To Do"
+      />
+      <button className="todo-form_button" type="submit">
+        Add new task
+      </button>
     </form>
   );
 };
