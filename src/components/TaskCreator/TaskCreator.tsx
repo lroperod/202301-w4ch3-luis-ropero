@@ -6,7 +6,6 @@ interface TaskCreatorProps {
 
 const TaskCreator: FC<TaskCreatorProps> = ({ functionOnSubmit }) => {
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
     const inputValue = e.currentTarget.taskList.value;
     functionOnSubmit(inputValue);
   };
